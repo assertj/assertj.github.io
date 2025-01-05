@@ -1,0 +1,22 @@
+url: /index.html
+component:
+  name: foobar
+  title: AssertJ Foobar
+version: '2.0.0'
+latest:
+  url: '/index.html'
+previous:
+  content: Quickstart
+  url: '#'
+  urlType: 'internal'
+next:
+  content: Liber Recusabo
+  url: '#'
+  urlType: 'internal'
+breadcrumbs:
+  - content: AssertJ Foobar
+    url: '#'
+    urlType: fragment
+  - content: Overview
+    url: '#'
+    urlType: fragment
