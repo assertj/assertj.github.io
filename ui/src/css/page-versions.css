@@ -1,0 +1,37 @@
+.page-versions {
+  position: absolute;
+  right: 12px;
+  top: 39px;
+  line-height: 1;
+}
+
+.page-versions .version-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: linear-gradient(to bottom, var(--page-version-menu-background) 0%, var(--page-version-menu-background) 100%) no-repeat;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  white-space: nowrap;
+}
+
+.page-versions:not(.is-active) .version-menu {
+  display: none;
+}
+
+.page-versions .version {
+  display: block;
+  padding-top: 0.5rem;
+}
+
+.page-versions .version.is-current {
+  display: none;
+}
+
+.page-versions .version.is-missing {
+  color: var(--page-version-missing-font-color);
+  font-style: italic;
+  text-decoration: none;
+}

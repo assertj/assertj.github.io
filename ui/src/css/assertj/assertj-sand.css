@@ -1,0 +1,30 @@
+:root {
+  --color-sand: #edd9a6;
+}
+
+html.sand-theme {
+  --color-accent-1: var(--color-black);
+  --color-accent-2: #e7ce8e;
+  --color-accent-3: #988b6a;
+  --body-background-color: var(--color-sand);
+  --nav-background: var(--color-sand);
+  --panel-background-color: var(--color-sand);
+  --panel-border-color: var(--color-black);
+  --layout-border-color: var(--color-black);
+  --nav-panel-divider-color: var(--color-black);
+  --toolbar-background: var(--color-sand);
+  --link-font-color: #861203;
+  --link_hover-font-color: #470c03;
+  --admonition-font-color: #fff;
+
+  .nav-item-toggle:hover + .nav-link,
+  .nav-item-toggle:hover + .nav-text {
+    background: var(--selected-background-color);
+  }
+
+  .nav-link:hover,
+  .nav-text:hover {
+    color: var(--toc-active-font-color);
+    background: var(--selected-background-color);
+  }
+}

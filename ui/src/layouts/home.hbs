@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{> head defaultPageTitle='Untitled'}}
+  </head>
+  <body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+{{> header}}
+<div class="body home">
+
+<main class="article">
+
+  <div class="content">
+<article class="doc">
+{{#with page.title}}
+<h1 id="page-title" class="page">{{{this}}}</h1>
+{{/with}}
+{{{page.contents}}}
+
+<div class="sect1 grid projects">
+  <div class="sectionbody">
+    {{#each site.components}}
+    {{#unless (eq ./name 'assertj')}}
+    <a href="{{{relativize ./url}}}" class="column3">
+      <div>
+        <h3>{{ title }}</h3>
+        <div class="paragraph">
+          <p>{{ latest.asciidoc.attributes.project-description }}</p>
+        </div>
+        <div class="paragraph">
+          <p><span class="version">{{ latest.displayVersion }}</span></p>
+        </div>
+      </div>
+    </a>
+    {{/unless}}
+    {{/each}}
+  </div>
+</div>
+
+
+</article>
+  </div>
+</main>
+
+</div>
+{{> footer}}
+  </body>
+</html>

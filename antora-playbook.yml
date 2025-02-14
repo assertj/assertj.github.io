@@ -1,0 +1,51 @@
+site:
+  title: AssertJ - fluent assertions java library
+  start_page: assertj::index.adoc
+  url: /assertj-doc
+
+content:
+  sources:
+  - url: .
+    start_path: docs
+    branches: HEAD
+  - url: https://github.com/assertj/assertj-core.git
+    start_paths:
+      - assertj-core/src/main/docs
+      - assertj-guava/src/main/docs
+    tags: [
+      'assertj-build-@({3..9}).@({27}).@({3..99})',
+      'assertj-build-@({3..9}).@({28..99}).+({0..9})'
+    ]
+    branches: [docs-*.*.*]
+    version:
+      assertj-build-(*.*.*): $1
+      docs-(*): $1
+  - url: https://github.com/assertj/assertj-db.git
+    start_path: src/main/docs
+    tags: [
+      'assertj-db-@({3..9}).!0.+({1..9})'
+    ]
+    branches: [docs-*.*.*]
+    version:
+      assertj-db-(*.*.*): $1
+      docs-(*): $1
+
+ui:
+  bundle:
+    url: ./ui/build/ui-bundle.zip
+
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
+    - '@springio/asciidoctor-extensions'
+  attributes:
+    stackoverflow-url: https://stackoverflow.com/questions/tagged/assertj
+    assertj-examples-repo: https://github.com/assertj/assertj-examples
+    assertj-javadoc-root: https://www.javadoc.io/doc/org.assertj
+    fold: none
+    page-pagination: '@'
+
+antora:
+  extensions:
+    - '@antora/lunr-extension'
+    - '@antora/collector-extension'
