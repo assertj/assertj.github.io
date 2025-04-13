@@ -1,0 +1,36 @@
+# Gradle
+.gradle
+build
+build/asciidoc/*
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# NodeJS
+node_modules/
+
+# Antora UI
+ui/public/
+
+# Eclipse
+.classpath
+.settings/
+.project
+bin/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+*.uml
+.idea/
+*/out/*
+
+# Misc
+*.log
+*.graphml
+coverage.db*
+out
+.metadata
+*.svg.cache
+*.pdf
